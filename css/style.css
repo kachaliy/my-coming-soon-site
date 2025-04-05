@@ -1,0 +1,173 @@
+/* style.css */
+body {
+  background-color: #0d2a3b; /* Фон глубокого озера */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff; /* Белый текст по умолчанию */
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Debug Menu */
+.debug-menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.debug-menu label {
+  margin-right: 5px;
+  color: #0d2a3b;
+}
+
+.debug-menu select {
+  padding: 3px;
+}
+
+/* Hero Section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin: 20px 0 0;
+  color: #ddeeff;
+}
+
+/* Секции */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about h2 {
+  color: #3b6a7d; /* About Us */
+}
+
+.services h2 {
+  color: #406f82; /* Our Services */
+}
+
+.why-choose h2 {
+  color: #457487; /* Why Choose Us */
+}
+
+.mission h2 {
+  color: #4a798c; /* Our Mission */
+}
+
+.cta h2 {
+  color: #4f7e91; /* Let’s Build the Future Together */
+}
+
+.contact h2 {
+  color: #548396; /* Contact Information */
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Services List */
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  color: #ddeeff;
+}
+
+/* Why Choose Us List */
+.why-choose-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.why-item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.why-item h3 {
+  font-size: 24px;
+  color: #ddeeff;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #457487;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #548396;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #4cbfc8;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 18px;
+}

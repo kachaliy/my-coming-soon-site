@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTE LLC - Global IT Solutions</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Debug Menu -->
+    <div class="debug-menu">
+      <label for="background-select">Background:</label>
+      <select id="background-select" onchange="changeBackground()">
+        <option value="1" selected>Back 1</option>
+        <option value="2">Back 2</option>
+        <option value="3">Back 3</option>
+      </select>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">NTE LLC: Your Global IT Solutions Partner</h1>
+        <p class="hero-subtitle">
+          We deliver cutting-edge software development, connecting innovation
+          across continents.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          NTE LLC is a global IT company founded by university classmates and
+          alumni, bringing together talents from the USA and Belarus. We bridge
+          innovation and expertise to deliver world-class software solutions.
+        </p>
+        <p>
+          Our mission is to foster innovation, strengthen ties between nations,
+          and support communities through technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <h3>Custom Software Development</h3>
+            <p>
+              Tailored software solutions to meet your unique business needs.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>IT Consulting</h3>
+            <p>Expert guidance to optimize your IT strategy and operations.</p>
+          </div>
+          <div class="service-item">
+            <h3>Global Outsourcing</h3>
+            <p>
+              Leverage our skilled team in Belarus for cost-effective
+              development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose Us</h2>
+        <div class="why-choose-list">
+          <div class="why-item">
+            <h3>Global Expertise</h3>
+            <p>Combining American innovation with Belarusian talent.</p>
+          </div>
+          <div class="why-item">
+            <h3>Cost-Effective</h3>
+            <p>$2,000/month per developer compared to $10,000+ in the USA.</p>
+          </div>
+          <div class="why-item">
+            <h3>Trusted Team</h3>
+            <p>An experienced team united by a shared mission.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+          NTE LLC is a bridge between nations, inspired by the story of our
+          founders—a reunion and a second chance. We aim to unite alumni,
+          promote Grodno as a gem of Belarus, and rebuild cultural and economic
+          ties between the USA and Belarus.
+        </p>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Let’s Build the Future Together</h2>
+        <a href="mailto:info@ntegroup.com" class="cta-button">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:info@ntegroup.com">info@ntegroup.com</a></p>
+        <p>Phone: +1 (509) 768-2249</p>
+        <p>Address: 8 The Green STE B, Dover, DE 19901, USA</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript for Background Change -->
+    <script>
+      function changeBackground() {
+        const select = document.getElementById("background-select");
+        const heroSection = document.querySelector(".hero");
+        const selectedValue = select.value;
+        heroSection.style.backgroundImage = `url('images/background-${selectedValue}.jpg')`;
+      }
+      window.onload = function () {
+        changeBackground();
+      };
+    </script>
+  </body>
+</html>
