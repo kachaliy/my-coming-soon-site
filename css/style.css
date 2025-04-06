@@ -1,148 +1,141 @@
-/* style.css */
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #0d2a3b; /* Фон глубокого озера */
+  font-family: Arial, sans-serif;
+  background-color: #0d2a3b;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: #ffffff; /* Белый текст по умолчанию */
 }
 
-/* Контейнер */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
-/* Debug Menu */
-.debug-menu {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px;
-  border-radius: 5px;
+a {
+  color: #4cbfc8;
+  text-decoration: none;
 }
 
-.debug-menu label {
-  margin-right: 5px;
-  color: #0d2a3b;
-}
-
-.debug-menu select {
-  padding: 3px;
+a:hover {
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
+  background-image: url("../images/background-1.jpg");
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.hero-title {
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
   font-size: 48px;
-  margin: 0;
   color: #ffffff;
 }
 
-.hero-subtitle {
+.hero p {
   font-size: 24px;
-  margin: 20px 0 0;
   color: #ddeeff;
 }
 
-/* Секции */
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Sections */
 section {
   padding: 60px 0;
 }
 
+.about {
+  background-color: #3b6a7d;
+}
+
+.services {
+  background-color: #406f82;
+}
+
+.why-choose {
+  background-color: #457487;
+}
+
+.mission {
+  background-color: #4a798c;
+}
+
+.cta {
+  background-color: #4f7e91;
+}
+
+.contact {
+  background-color: #548396;
+}
+
 h2 {
+  color: #ffffff;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.about h2 {
-  color: #3b6a7d; /* About Us */
-}
-
-.services h2 {
-  color: #406f82; /* Our Services */
-}
-
-.why-choose h2 {
-  color: #457487; /* Why Choose Us */
-}
-
-.mission h2 {
-  color: #4a798c; /* Our Mission */
-}
-
-.cta h2 {
-  color: #4f7e91; /* Let’s Build the Future Together */
-}
-
-.contact h2 {
-  color: #548396; /* Contact Information */
+h3 {
+  color: #ddeeff;
+  font-size: 24px;
 }
 
 p {
   font-size: 18px;
-  line-height: 1.6;
-  color: #ffffff;
 }
 
-/* Services List */
-.services-list {
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.service-item {
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.service-item h3 {
-  font-size: 24px;
-  color: #ddeeff;
-}
-
-/* Why Choose Us List */
-.why-choose-list {
-  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.why-item {
-  width: 30%;
-  margin-bottom: 20px;
+li {
+  flex: 1 1 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 
-.why-item h3 {
-  font-size: 24px;
-  color: #ddeeff;
+li:hover {
+  transform: translateY(-5px);
 }
 
-/* CTA Section */
-.cta {
-  text-align: center;
-}
-
+/* CTA Button */
 .cta-button {
   display: inline-block;
-  padding: 15px 30px;
   background-color: #457487;
   color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 5px;
-  margin-top: 20px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -150,24 +143,56 @@ p {
 }
 
 /* Contact Section */
-.contact {
-  text-align: center;
+.contact p {
+  margin: 10px 0;
 }
 
-.contact a {
-  color: #4cbfc8;
-  text-decoration: none;
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #457487;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
 }
 
-.contact a:hover {
-  text-decoration: underline;
+#back-to-top:hover {
+  background-color: #548396;
 }
 
-.social-links {
-  margin-top: 20px;
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.social-links a {
-  margin: 0 10px;
-  font-size: 18px;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    flex: 1 1 100%;
+  }
 }
